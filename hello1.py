@@ -6,7 +6,7 @@ import sys
 from flask import Flask, render_template, json, request
 #import gdax
 import gemini
-import urllib.request as urllib2
+#import urllib.request as urllib2
 
 #public_client = gdax.PublicClient()
 
