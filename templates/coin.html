@@ -1,0 +1,53 @@
+<!doctype html>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<title>Hello from Flask</title>
+<h2>Wallet</h2>
+<a href="/wallet/btc">BTC</a></br>
+<a href="/wallet/ltc">ltc</a></br>
+<a href="/wallet/ETH">ETH</a></br>
+<h2>Buy $ Sell</h2>
+<a href="/coin/btc">BTC</a></br>
+<a href="/coin/ltc">ltc</a></br>
+<a href="/coin/ETH">ETH</a></br>
+{% if name %}
+  <h1>{{ name }}</h1>
+          <form class="form-signin">
+		  		  <h3>ihave to spend</h3>
+				  <input type="number"  name="CoinDollar" id="CoinDollar" name="CoinDollar"></input>
+
+<br>
+		 
+<input disabled type="hidden"  value="{{ FrontPrice }}"  id="virtualcoinValue" name="virtualcoinValue" placeholder="icanpaythis"></input>
+
+		  <h3>CoinDollar change</h3>
+<input type="number" step='0.01' value="1"  id="virtualcoin" name="virtualcoin" placeholder="icanpaythis"></input>
+
+        <button id="submit" class="btn btn-lg btn-primary btn-block" type="button">calculate!</button>
+      		  <h3>totalprice</h3>
+
+	  <input disabled type="text" value=""  id="total_price" name="" placeholder=""></input>
+
+	  </form>
+
+{% else %}
+  <h1>Hello, World!</h1>
+
+
+ {% endif %}
+<script>
+
+$("#CoinDollar").change(function(){
+	var one = $("#CoinDollar").val(); 
+	var tow = $("#virtualcoinValue").val(); 
+	var total = (one / tow);
+	$('#virtualcoin').val(total);
+	$('#total_price').val(total);
+})
+$("#virtualcoin").change(function(){
+	var one = $("#virtualcoin").val(); 
+	var tow = $("#virtualcoinValue").val(); 
+	var total= (one * tow);
+	$('#CoinDollar').val(total);
+	$('#total_price').val(one);
+})
+</script>

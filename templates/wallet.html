@@ -1,0 +1,22 @@
+<!doctype html>
+<title>Hello from Flask</title>
+<h2>Wallet</h2>
+<a href="/wallet/btc">BTC</a></br>
+<a href="/wallet/ltc">ltc</a></br>
+<a href="/wallet/ETH">ETH</a></br>
+<h2>Buy $ Sell</h2>
+<a href="/coin/btc">BTC</a></br>
+<a href="/coin/ltc">ltc</a></br>
+<a href="/coin/ETH">ETH</a></br>
+
+{% if VerifyAccountStatus %}
+
+  <h1>Hello {{ name }}!</h1>	
+  <p>Privet Key {{ name }}!</p>
+  <p>Public Key {{ name }}!</p>
+{% else %}
+  <h2>Sorry your Account not verify ! please bla bla bal </h2>
+  
+
+
+{% endif %}
