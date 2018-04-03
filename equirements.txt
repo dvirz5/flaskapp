@@ -1,0 +1,6 @@
+flask-sql
+json
+gdax
+gemini
+urllib
+urllib2

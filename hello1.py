@@ -1,8 +1,7 @@
-
 from flaskext.mysql import MySQL
 from flask import Flask,request
 import requests
-import json
+from flask import json
 import sys
 from flask import Flask, render_template, json, request
 import gdax
