@@ -4,7 +4,7 @@ import requests
 from flask import json
 import sys
 from flask import Flask, render_template, json, request
-import gdax
+#import gdax
 import gemini
 import urllib.request as urllib2
 
