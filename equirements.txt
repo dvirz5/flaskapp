@@ -4,3 +4,4 @@ gdax
 gemini
 urllib
 urllib2
+requests
